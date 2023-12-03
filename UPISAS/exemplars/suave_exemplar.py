@@ -5,7 +5,7 @@ pp = pprint.PrettyPrinter(indent=4)
 logging.getLogger().setLevel(logging.INFO)
 
 # TODO add actual exemplar name
-class YourExemplar(Exemplar):
+class Suave(Exemplar):
     """
     A class which encapsulates a self-adaptive exemplar run in a docker container.
     """

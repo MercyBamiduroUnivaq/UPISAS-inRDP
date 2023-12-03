@@ -2,14 +2,14 @@ import unittest
 import time
 
 from UPISAS import get_response_for_get_request
-from UPISAS.exemplars.swim import SWIM
+from UPISAS.exemplars.suave_exemplar import Suave
 from UPISAS.strategies.empty_strategy import EmptyStrategy
 
 
-class TestSWIMInterface(unittest.TestCase):
+class TestSuaveInterface(unittest.TestCase):
 
     def setUp(self):
-        self.exemplar = SWIM(auto_start=True)
+        self.exemplar = Suave(auto_start=True, container_name="suaveupisas1")
         self._start_server_and_wait_until_is_up()
         self.strategy = EmptyStrategy(self.exemplar)
 
