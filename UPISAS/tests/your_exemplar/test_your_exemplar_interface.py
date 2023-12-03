@@ -9,7 +9,7 @@ from UPISAS.strategies.empty_strategy import EmptyStrategy
 class TestYourExemplarInterface(unittest.TestCase):
 
     def setUp(self):
-        self.exemplar = YourExemplar(auto_start=True)
+        self.exemplar = YourExemplar(auto_start=True, container_name="suaveupisas1")
         self._start_server_and_wait_until_is_up()
         self.strategy = EmptyStrategy(self.exemplar)
 
